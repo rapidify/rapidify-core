@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Config = require('./config');
 
-class DbConfig {
+class DbConnection {
     constructor() {
         this.config = new Config();
         this.MONGO_DB = this.config.MONGO_DB;
@@ -28,4 +28,4 @@ class DbConfig {
     }
 }
 
-module.exports = DbConfig;
+module.exports = DbConnection;
