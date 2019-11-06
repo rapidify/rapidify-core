@@ -22,8 +22,7 @@ class Config {
         const envs = {
             dev: 'development',
             qa: 'testing',
-            stage: 'staging',
-            production: 'production'
+            stage: 'staging'
         };
 
         for (let kenv in envs) {
