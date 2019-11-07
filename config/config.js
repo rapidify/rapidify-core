@@ -10,6 +10,7 @@ class Config {
         this.HOST = process.env.HOST || '0.0.0.0';
         this.PORT = process.env.PORT || 9000;
         this.ORIGIN = process.env.ORIGIN || '*';
+        this.HTTP_METHODS = process.env.HTTP_METHODS || 'GET, PATCH, POST, DELETE, OPTIONS'
         this.LOGGER_LEVEL = process.env.LOGGER_LEVEL || 'info';
         this.BASE_API_ROUTE = process.env.BASE_API_ROUTE || '/api';
         this.ROOT_SEEDER_DIR = process.env.ROOT_SEEDER_DIR || '/src/seeders';
