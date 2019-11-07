@@ -18,10 +18,6 @@ server.register(require('fastify-cors'), {
     methods: HTTP_METHODS
 });
 
-server.get('/', (req, reply) => {
-    reply.send(`GET http://${HOST}:${PORT}/`);
-});
-
 server.listen(PORT, HOST, (err) => {
     if (err) throw err;
 
