@@ -18,6 +18,7 @@ class Config {
         this.MONGO_DB_URL = process.env.MONGO_DB_URL;
         this.MONGO_DB_USER = process.env.MONGO_DB_USER;
         this.MONGO_DB_PASSWORD = process.env.MONGO_DB_PASSWORD;
+        this.DB_RESULTSET_FILTER = process.env.DB_RESULTSET_FILTER || '-_id -__v -password';
     }
 
     isNodeEnvLower() {
