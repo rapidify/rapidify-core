@@ -12,5 +12,9 @@
     "mongoose": "^5.7.7",
     "pino": "^5.13.2",
     "pino-pretty": "^3.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0"
   }
 }
