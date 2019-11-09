@@ -12,7 +12,7 @@ class Config {
         this.ORIGIN = process.env.ORIGIN || '*';
         this.HTTP_METHODS = process.env.HTTP_METHODS || 'GET, PATCH, POST, DELETE, OPTIONS'
         this.LOGGER_LEVEL = process.env.LOGGER_LEVEL || 'info';
-        this.ROOT_SEEDER_DIR = process.env.ROOT_SEEDER_DIR || '/src/seeders';
+        this.ROOT_SEEDER_DIR = `${process.cwd()}/${process.env.ROOT_SEEDER_DIR}` || `${process.cwd()}/src/seeders`;
         this.MONGO_DB = process.env.MONGO_DB;
         this.MONGO_DB_URL = process.env.MONGO_DB_URL;
         this.MONGO_DB_USER = process.env.MONGO_DB_USER;
