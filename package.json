@@ -1,17 +1,11 @@
 {
   "name": "@the-medicsoft/webapi-framework",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "repository": {
-    "url": "https://github.com/the-medicsoft/webapi-framework"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "dependencies": {
     "fastify": "^2.10.0",
     "fastify-cors": "^2.1.3",
