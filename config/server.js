@@ -26,7 +26,7 @@ server.register(require("fastify-cors"), {
 });
 
 // custom logger plugin
-require("../lib/logger/logger").logger(server);
+require("../lib/logger/logger")(server);
 
 server.listen(PORT, HOST, err => {
   if (err) throw err;
