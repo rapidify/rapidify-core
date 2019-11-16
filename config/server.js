@@ -1,6 +1,6 @@
 const fastify = require("fastify");
 
-const Config = require("./config");
+const BaseConfig = require("./config");
 const DbConnection = require("./database");
 
 const {
@@ -10,7 +10,7 @@ const {
   IS_NODE_ENV_LOWER,
   ORIGIN,
   HTTP_METHODS
-} = new Config();
+} = new BaseConfig();
 
 const server = fastify({
   logger: {
@@ -31,7 +31,7 @@ require("../lib/logger/logger").logger(server);
 server.listen(PORT, HOST, err => {
   if (err) throw err;
 
-  // new DbConnection().connect();
+  new DbConnection().connect();
 });
 
 module.exports = server;

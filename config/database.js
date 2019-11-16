@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
-const chalkGreen = require("chalk").green;
-
-const Config = require("./config");
+const BaseConfig = require("./config");
 
 class DbConnection {
   constructor() {
-    this.config = new Config();
+    this.config = new BaseConfig();
     this.MONGO_DB = this.config.MONGO_DB;
     this.MONGO_DB_USER = this.config.MONGO_DB_USER;
     this.MONGO_DB_URL = this.config.MONGO_DB_URL;
@@ -23,7 +21,7 @@ class DbConnection {
 
       await mongoose.connect(this.MONGO_DB_URL);
 
-      console.log(chalkGreen("Connected to Mongo"));
+      console.log("Connected to Mongo");
     } catch (err) {
       throw err;
     }

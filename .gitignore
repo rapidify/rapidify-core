@@ -33,3 +33,5 @@ Thumbs.db
 
 # Env Settings
 .env
+
+.npmrc
