@@ -1,5 +1,5 @@
 module.exports = {
-    config: require('./config'),
-    database: require('./database'),
-    server: require('./server')
-}
+  BaseConfig: require("./config"),
+  DbConnection: require("./database"),
+  server: require("./server")
+};
