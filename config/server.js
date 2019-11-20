@@ -15,8 +15,8 @@ const {
 const server = fastify({
   logger: {
     level: LOGGER_LEVEL,
-    enabled: IS_NODE_ENV_LOWER,
-    prettyPrint: IS_NODE_ENV_LOWER
+    enabled: false,
+    prettyPrint: false
   }
 });
 
@@ -24,6 +24,9 @@ server.register(require("fastify-cors"), {
   origin: ORIGIN,
   methods: HTTP_METHODS
 });
+
+// custom logger plugin
+require("../lib/logger/logger")(server);
 
 server.listen(PORT, HOST, err => {
   if (err) throw err;
