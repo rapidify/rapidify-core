@@ -30,7 +30,9 @@ class BaseConfig {
     };
 
     for (let kenv in envs) {
-      return envs[kenv] === this.NODE_ENV;
+      if (envs[kenv] === this.NODE_ENV) {
+        return envs[kenv] === this.NODE_ENV;
+      }
     }
   }
 }

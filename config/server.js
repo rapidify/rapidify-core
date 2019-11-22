@@ -25,6 +25,9 @@ server.register(require("fastify-cors"), {
   methods: HTTP_METHODS
 });
 
+// HTTP Response Decorator
+require('../lib/hooks/http-result.hook')(server);
+
 server.listen(PORT, HOST, err => {
   if (err) throw err;
 
