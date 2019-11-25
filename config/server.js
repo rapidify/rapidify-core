@@ -1,7 +1,7 @@
-const fastify = require("fastify");
+const fastify = require('fastify');
 
-const BaseConfig = require("./config");
-const DbConnection = require("./database");
+const BaseConfig = require('./config');
+const DbConnection = require('./database');
 
 const {
   HOST,
@@ -20,7 +20,7 @@ const server = fastify({
   }
 });
 
-server.register(require("fastify-cors"), {
+server.register(require('fastify-cors'), {
   origin: ORIGIN,
   methods: HTTP_METHODS
 });

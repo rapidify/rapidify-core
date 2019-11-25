@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const BaseConfig = require("./config");
+const mongoose = require('mongoose');
+const BaseConfig = require('./config');
 
 class DbConnection {
   constructor() {
@@ -12,16 +12,19 @@ class DbConnection {
 
   async connect() {
     try {
-      mongoose.set("user", this.MONGO_DB_USER);
-      mongoose.set("password", this.MONGO_DB_PASSWORD);
+      mongoose.set('user', this.MONGO_DB_USER);
+      mongoose.set('password', this.MONGO_DB_PASSWORD);
 
-      mongoose.set("useNewUrlParser", true);
-      mongoose.set("useFindAndModify", false);
-      mongoose.set("useUnifiedTopology", true);
+      mongoose.set('useNewUrlParser', true);
+      mongoose.set('useFindAndModify', false);
+      mongoose.set('useUnifiedTopology', true);
 
-      await mongoose.connect(this.MONGO_DB_URL);
-
-      console.log("Connected to Mongo");
+      if (this.MONGO_DB_URL) {
+        await mongoose.connect(this.MONGO_DB_URL);
+        console.log('Connected to Mongo');
+      } else {
+        console.error('Database Connection String Not Defined!');
+      }
     } catch (err) {
       throw err;
     }
