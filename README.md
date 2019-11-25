@@ -1,7 +1,8 @@
-# The MedicSoft (WebApi Framework)
+# Rapidify Core (Web API Framework)
 
-Going forward this framework will be used in making Web API(s).
-This framework follows DRY approach and, has BaseModel class to perform any CRUD operation against DB.
+This framework is built using fastify an efficient web server offering some features like Route Schemas, Hooks to alter Request-Response lifecycle. But, one thing is always missing "A Proper Web API Project structure".
+
+This framework is here to solve that. Follows DRY approach, offers BaseController and, BaseModel Classes doing there respective works so that you don't have to.
 
 ## Project Dev Dependencies
 
@@ -15,7 +16,7 @@ Developer has to install following dev dependencies
 
 This framework uses following dependencies
 
-- fastify, web server framework
+- Fastify, web server framework
 - mongoose, (ODM) Object Document Mapper
 - Pino & Pino Pretty, to pretty print logs to console
 
