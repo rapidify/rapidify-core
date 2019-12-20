@@ -12,8 +12,8 @@ class DbConnection {
 
   async connect() {
     try {
-      mongoose.set('user', this.MONGO_DB_USER);
-      mongoose.set('password', this.MONGO_DB_PASSWORD);
+      // mongoose.set('user', this.MONGO_DB_USER);
+      // mongoose.set('password', this.MONGO_DB_PASSWORD);
 
       mongoose.set('useNewUrlParser', true);
       mongoose.set('useFindAndModify', false);
